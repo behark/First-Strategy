@@ -1,0 +1,30 @@
+{
+  "telegram": {
+    "bot_token": "7634324156:AAFupAZCihSHKq-mj3wBZ3tDLfeyzXl5aRo",
+    "chat_id": "1507876704",
+    "notifications_enabled": true
+  },
+  "testing": {
+    "continuous_testing_interval_minutes": 30,
+    "coverage_threshold": 80.0,
+    "quality_score_threshold": 0.7,
+    "enable_quick_tests": true,
+    "enable_full_analysis": true
+  },
+  "ai_analysis": {
+    "enable_insights": true,
+    "enable_recommendations": true,
+    "enable_risk_assessment": true,
+    "quality_metrics": {
+      "test_completeness_weight": 0.3,
+      "error_handling_weight": 0.3,
+      "integration_test_weight": 0.4
+    }
+  },
+  "reporting": {
+    "generate_html_reports": true,
+    "generate_telegram_reports": true,
+    "store_test_history": true,
+    "max_history_entries": 50
+  }
+} 
