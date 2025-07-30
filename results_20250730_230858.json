@@ -1,0 +1,67 @@
+{
+    "trades": [
+        {
+            "symbol": "BTC/USDT",
+            "type": "SELL",
+            "price": 37201.4168228021,
+            "quantity": 0.005376139326968126,
+            "timestamp": "2025-07-30T23:08:57.809074",
+            "order_id": "order_1753909737788",
+            "profit": 0.0
+        },
+        {
+            "symbol": "SOL/USDT",
+            "type": "SELL",
+            "price": 90.6531286392696,
+            "quantity": 2.206211776714819,
+            "timestamp": "2025-07-30T23:08:57.896920",
+            "order_id": "order_1753909737876",
+            "profit": 0.0
+        },
+        {
+            "symbol": "BTC/USDT",
+            "type": "SELL",
+            "price": 37201.4168228021,
+            "quantity": 0.005376139326968126,
+            "timestamp": "2025-07-30T23:08:58.021074",
+            "order_id": "order_1753909738000",
+            "profit": 0.0
+        },
+        {
+            "symbol": "SOL/USDT",
+            "type": "SELL",
+            "price": 90.6531286392696,
+            "quantity": 2.206211776714819,
+            "timestamp": "2025-07-30T23:08:58.097243",
+            "order_id": "order_1753909738076",
+            "profit": 0.0
+        },
+        {
+            "symbol": "BTC/USDT",
+            "type": "SELL",
+            "price": 37201.4168228021,
+            "quantity": 0.005376139326968126,
+            "timestamp": "2025-07-30T23:08:58.305046",
+            "order_id": "order_1753909738284",
+            "profit": 0.0
+        },
+        {
+            "symbol": "SOL/USDT",
+            "type": "SELL",
+            "price": 90.6531286392696,
+            "quantity": 2.206211776714819,
+            "timestamp": "2025-07-30T23:08:58.381037",
+            "order_id": "order_1753909738359",
+            "profit": 0.0
+        }
+    ],
+    "metrics": {
+        "total_trades": 6,
+        "win_rate": 0.0,
+        "profit_factor": Infinity,
+        "sharpe_ratio": 0,
+        "max_drawdown": 0,
+        "total_return": 0.0
+    },
+    "final_balance": 10000.0
+}

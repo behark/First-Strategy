@@ -1,0 +1,30 @@
+2025-07-30 23:08:57,469 - main - INFO - Starting trading system with 4 symbols
+2025-07-30 23:08:57,469 - order_executor - INFO - Connecting to broker API...
+2025-07-30 23:08:57,570 - main - INFO - Trading system started successfully
+2025-07-30 23:08:57,724 - risk_manager - INFO - Adjusted trade quantity from 0.03020586994233604 to 0.005376139326968126 due to risk limits
+2025-07-30 23:08:57,729 - order_executor - INFO - Submitting SELL order for 0.005376139326968126 BTC/USDT
+2025-07-30 23:08:57,808 - order_executor - INFO - Simulated FILL for order order_1753909737788
+2025-07-30 23:08:57,808 - main - INFO - Executed SELL order for BTC/USDT: 0.005376139326968126 units at 37201.4168228021
+2025-07-30 23:08:57,810 - risk_manager - INFO - Adjusted trade quantity from 10.431164549249214 to 2.206211776714819 due to risk limits
+2025-07-30 23:08:57,824 - order_executor - INFO - Submitting SELL order for 2.206211776714819 SOL/USDT
+2025-07-30 23:08:57,896 - order_executor - INFO - Simulated FILL for order order_1753909737876
+2025-07-30 23:08:57,896 - main - INFO - Executed SELL order for SOL/USDT: 2.206211776714819 units at 90.6531286392696
+2025-07-30 23:08:57,949 - risk_manager - INFO - Adjusted trade quantity from 0.016238825828104004 to 0.005376139326968126 due to risk limits
+2025-07-30 23:08:57,949 - order_executor - INFO - Submitting SELL order for 0.005376139326968126 BTC/USDT
+2025-07-30 23:08:58,020 - order_executor - INFO - Simulated FILL for order order_1753909738000
+2025-07-30 23:08:58,020 - main - INFO - Executed SELL order for BTC/USDT: 0.005376139326968126 units at 37201.4168228021
+2025-07-30 23:08:58,023 - risk_manager - INFO - Adjusted trade quantity from 8.724010484606413 to 2.206211776714819 due to risk limits
+2025-07-30 23:08:58,024 - order_executor - INFO - Submitting SELL order for 2.206211776714819 SOL/USDT
+2025-07-30 23:08:58,096 - order_executor - INFO - Simulated FILL for order order_1753909738076
+2025-07-30 23:08:58,097 - main - INFO - Executed SELL order for SOL/USDT: 2.206211776714819 units at 90.6531286392696
+2025-07-30 23:08:58,224 - risk_manager - INFO - Adjusted trade quantity from 0.016238825828104004 to 0.005376139326968126 due to risk limits
+2025-07-30 23:08:58,233 - order_executor - INFO - Submitting SELL order for 0.005376139326968126 BTC/USDT
+2025-07-30 23:08:58,304 - order_executor - INFO - Simulated FILL for order order_1753909738284
+2025-07-30 23:08:58,304 - main - INFO - Executed SELL order for BTC/USDT: 0.005376139326968126 units at 37201.4168228021
+2025-07-30 23:08:58,308 - risk_manager - INFO - Adjusted trade quantity from 8.724010484606413 to 2.206211776714819 due to risk limits
+2025-07-30 23:08:58,309 - order_executor - INFO - Submitting SELL order for 2.206211776714819 SOL/USDT
+2025-07-30 23:08:58,379 - order_executor - INFO - Simulated FILL for order order_1753909738359
+2025-07-30 23:08:58,380 - main - INFO - Executed SELL order for SOL/USDT: 2.206211776714819 units at 90.6531286392696
+2025-07-30 23:08:58,388 - main - INFO - Results saved to results_20250730_230858.json
+2025-07-30 23:08:58,389 - main - INFO - Stopping trading system
+2025-07-30 23:08:58,390 - order_executor - INFO - Disconnecting from broker API...
