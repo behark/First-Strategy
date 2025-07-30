@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  signal-bot:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
+    container_name: unite-signal-bot
+    restart: unless-stopped
+    environment:
+      - TRADING_SYMBOL=BTCUSDT
+      - PERIOD_RSI=2
+      - PERIOD_EMA=8
+      - PROFIT_PCT=0.004
+      - STOP_PCT=0.004
+      # Uncomment and set these for Telegram notifications
+      # - TELEGRAM_TOKEN=your_telegram_bot_token
+      # - TELEGRAM_CHAT_ID=your_telegram_chat_id
+    volumes:
+      - ../logs:/app/logs
+    healthcheck:
+      test: ["CMD", "/app/healthcheck.sh"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

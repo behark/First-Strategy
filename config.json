@@ -1,0 +1,32 @@
+{
+  "symbols": ["BTC/USDT", "ETH/USDT", "SOL/USDT", "ADA/USDT"],
+  "api_key": "",
+  "api_secret": "",
+  "paper_trading": true,
+  "risk_per_trade": 0.02,
+  "lookback_period": 20,
+  "initial_balance": 10000.0,
+  "update_interval": 60,
+  "rsi_threshold_low": 30,
+  "rsi_threshold_high": 70,
+  "max_position_size": 0.1,
+  "max_risk_per_trade": 0.02,
+  "max_correlated_positions": 3,
+  "max_drawdown": 0.1,
+  "market_data": {
+    "provider": "synthetic",
+    "exchange": "binance",
+    "timeframe": "1m"
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "trading_system.log"
+  },
+  "notifications": {
+    "telegram": {
+      "enabled": false,
+      "bot_token": "",
+      "chat_id": ""
+    }
+  }
+}
