@@ -1,0 +1,15 @@
+{
+  "symbols": ["BTC/USDT", "ETH/USDT", "SOL/USDT", "ADA/USDT"],
+  "api_key": "your_api_key_here",
+  "api_secret": "your_api_secret_here",
+  "risk_per_trade": 0.02,
+  "lookback_period": 20,
+  "initial_balance": 10000.0,
+  "update_interval": 60,
+  "rsi_threshold_low": 30,
+  "rsi_threshold_high": 70,
+  "max_position_size": 0.1,
+  "max_risk_per_trade": 0.02,
+  "max_correlated_positions": 3,
+  "max_drawdown": 0.1
+}

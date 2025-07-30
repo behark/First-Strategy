@@ -101,7 +101,7 @@ class TestRiskManager:
         self.risk_manager.set_account_balance(9000.0)  # 10% drawdown
         
         drawdown = self.risk_manager.calculate_current_drawdown()
-        assert drawdown == 0.1
+        assert abs(drawdown - 0.1) < 1e-10  # Use approximate comparison for floating point
         
     def test_position_sizing(self):
         """Test position sizing logic."""

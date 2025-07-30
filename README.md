@@ -1,234 +1,124 @@
-# First-Strategy Trading System
+# First Strategy - Automated Trading System
 
-A modular, scalable trading system built with Python that implements algorithmic trading strategies with comprehensive risk management and real-time market data processing.
+A comprehensive automated trading system implementing technical analysis strategies with risk management and order execution capabilities.
 
-## 🚀 Features
+## Features
 
-- **Modular Architecture**: Clean separation of concerns with dedicated components for strategy, execution, risk management, and market data
-- **Async Support**: Built with asyncio for high-performance, non-blocking operations
-- **Multiple Data Sources**: Support for synthetic data (testing) and real exchange data
-- **Comprehensive Risk Management**: Position sizing, correlation analysis, drawdown protection
-- **Real-time Processing**: Efficient market data processing and signal generation
-- **Extensible Design**: Easy to add new strategies, data sources, and execution methods
+- **Strategy Engine**: RSI and Moving Average based trading signals
+- **Order Execution**: Flexible order management system with paper trading support
+- **Risk Management**: Position sizing, correlation analysis, and drawdown protection
+- **Performance Tracking**: Comprehensive metrics and logging
+- **Configurable**: JSON-based configuration system
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 First-Strategy/
-├── main.py                 # Main entry point with TradingSystem orchestrator
-├── config.json            # Configuration file
-├── requirements.txt       # Python dependencies
-├── README.md             # This file
-├── strategy.py           # Trading strategy implementation
-├── order_executor.py     # Order execution and broker integration
-├── risk_manager.py       # Risk management and position sizing
-├── market_data_provider.py # Market data fetching and management
-├── utils.py              # Utility functions and helpers
-└── unite-signal-bot/     # Separate signal bot implementation
-    ├── src/
-    │   ├── main.py       # Signal bot orchestrator
-    │   ├── signal_engine.py # Signal generation engine
-    │   ├── indicators.py # Technical indicators
-    │   ├── market_data.py # Market data handling
-    │   ├── risk_manager.py # Risk management
-    │   └── telegram_notifier.py # Telegram notifications
-    ├── tests/            # Test suite
-    └── infra/           # Docker and deployment files
+├── strategy.py          # Core trading strategy logic
+├── order_executor.py    # Order execution and management
+├── risk_manager.py      # Risk management system
+├── utils.py            # Utility functions and helpers
+├── main.py             # Main execution script
+├── config.json.example # Configuration template
+├── requirements.txt    # Python dependencies
+└── README.md          # This file
 ```
 
-## 🏗️ Architecture
+## Installation
 
-### Core Components
+1. Clone the repository:
+```bash
+git clone https://github.com/behark/First-Strategy.git
+cd First-Strategy
+```
 
-1. **TradingSystem** (`main.py`)
-   - Main orchestrator that coordinates all components
-   - Manages the trading lifecycle
-   - Handles configuration and logging
+2. Create a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
-2. **TradingStrategy** (`strategy.py`)
-   - Implements trading logic and signal generation
-   - Supports multiple technical indicators (RSI, SMA, etc.)
-   - Calculates position sizes based on risk parameters
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-3. **OrderExecutor** (`order_executor.py`)
-   - Handles order submission and management
-   - Supports paper trading and live trading modes
-   - Async implementation for better performance
+4. Configure the strategy:
+```bash
+cp config.json.example config.json
+# Edit config.json with your settings
+```
 
-4. **RiskManager** (`risk_manager.py`)
-   - Manages position sizing and risk limits
-   - Tracks correlation between positions
-   - Implements drawdown protection
+## Usage
 
-5. **MarketDataProvider** (`market_data_provider.py`)
-   - Abstract interface for market data sources
-   - Supports synthetic data for testing
-   - Extensible for real exchange integration
-
-## 🛠️ Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd First-Strategy
-   ```
-
-2. **Create virtual environment**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Configure the system**
-   - Copy `config.json` and modify settings
-   - Add API keys if using real exchange data
-   - Adjust risk parameters as needed
-
-## 🚀 Usage
-
-### Basic Usage
+### Paper Trading (Recommended for testing)
 
 ```bash
-# Run with default configuration
-python main.py
-
-# Run with custom config file
-python main.py --config my_config.json
-
-# Enable paper trading
-python main.py --paper
-
-# Enable debug logging
-python main.py --debug
+python main.py --paper --config config.json
 ```
 
-### Configuration
-
-The system is configured via `config.json`:
-
-```json
-{
-  "symbols": ["BTC/USDT", "ETH/USDT"],
-  "paper_trading": true,
-  "risk_per_trade": 0.02,
-  "max_position_size": 0.1,
-  "market_data": {
-    "provider": "synthetic",
-    "exchange": "binance"
-  }
-}
-```
-
-### Adding New Strategies
-
-1. **Extend TradingStrategy class**:
-   ```python
-   class MyCustomStrategy(TradingStrategy):
-       def generate_signals(self) -> Dict[str, str]:
-           # Implement your strategy logic
-           pass
-   ```
-
-2. **Add new indicators**:
-   ```python
-   def calculate_bollinger_bands(self, prices: np.ndarray, period: int = 20):
-       # Implement Bollinger Bands calculation
-       pass
-   ```
-
-### Adding New Data Sources
-
-1. **Implement MarketDataProvider**:
-   ```python
-   class MyExchangeProvider(MarketDataProvider):
-       async def fetch_data(self) -> Dict[str, pd.DataFrame]:
-           # Implement data fetching logic
-           pass
-   ```
-
-2. **Update configuration**:
-   ```json
-   {
-     "market_data": {
-       "provider": "my_exchange"
-     }
-   }
-   ```
-
-## 🧪 Testing
-
-Run the test suite:
+### Live Trading (Use with caution)
 
 ```bash
-# Run all tests
-pytest
-
-# Run with coverage
-pytest --cov=.
-
-# Run specific test file
-pytest tests/test_strategy.py
+python main.py --config config.json
 ```
 
-## 📊 Performance Monitoring
-
-The system includes built-in performance monitoring:
-
-- **Processing times**: Track signal generation and execution latency
-- **Risk metrics**: Monitor drawdown, correlation, and position exposure
-- **Trading metrics**: Win rate, profit factor, Sharpe ratio
-
-## 🔧 Development
-
-### Code Style
-
-The project uses:
-- **Black** for code formatting
-- **Flake8** for linting
-- **MyPy** for type checking
+### Debug Mode
 
 ```bash
-# Format code
-black .
-
-# Check types
-mypy .
-
-# Lint code
-flake8 .
+python main.py --paper --debug --config config.json
 ```
 
-### Adding Features
+## Configuration
 
-1. **Follow the modular pattern**: Each component should have a clear interface
-2. **Use async/await**: For I/O operations and better performance
-3. **Add comprehensive tests**: For new functionality
-4. **Update documentation**: Keep README and docstrings current
+The strategy is configured through a JSON file. Key parameters include:
 
-## 🚨 Risk Disclaimer
+- `symbols`: List of trading pairs to monitor
+- `risk_per_trade`: Risk percentage per trade (default: 2%)
+- `lookback_period`: Period for technical indicators (default: 20)
+- `initial_balance`: Starting balance for paper trading
+- `rsi_threshold_low/high`: RSI oversold/overbought levels
 
-This software is for educational and research purposes. Trading involves substantial risk of loss and is not suitable for all investors. Past performance does not guarantee future results.
+## Strategy Logic
 
-## 🤝 Contributing
+The current implementation uses:
+
+1. **RSI (Relative Strength Index)**: Identifies oversold/overbought conditions
+2. **Moving Averages**: Confirms trend direction
+3. **Risk Management**: Position sizing based on volatility and correlation
+4. **Stop Loss/Take Profit**: Automatic position management
+
+## Risk Management
+
+- Maximum position size limits
+- Correlation-based position adjustment
+- Maximum drawdown protection
+- Dynamic position sizing based on volatility
+
+## Performance Metrics
+
+The system tracks:
+- Total return and profit factor
+- Win rate and Sharpe ratio
+- Maximum drawdown
+- Trade statistics
+
+## Contributing
 
 1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests for new functionality
-5. Submit a pull request
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## 📄 License
+## Disclaimer
+
+This software is for educational purposes only. Trading cryptocurrencies and other financial instruments involves substantial risk and may not be suitable for all investors. Past performance is not indicative of future results. Use at your own risk.
+
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🆘 Support
+## Support
 
-For questions or issues:
-- Create an issue on GitHub
-- Check the documentation in each module
-- Review the test files for usage examples 
+For questions and support, please open an issue on GitHub.

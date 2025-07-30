@@ -28,3 +28,45 @@
 2025-07-30 23:08:58,388 - main - INFO - Results saved to results_20250730_230858.json
 2025-07-30 23:08:58,389 - main - INFO - Stopping trading system
 2025-07-30 23:08:58,390 - order_executor - INFO - Disconnecting from broker API...
+2025-07-30 23:29:56,348 - main - INFO - Starting trading system with 4 symbols
+2025-07-30 23:29:56,348 - order_executor - INFO - Connecting to broker API...
+2025-07-30 23:29:56,449 - main - INFO - Trading system started successfully
+2025-07-30 23:29:56,539 - risk_manager - INFO - Adjusted trade quantity from 0.02862893545838453 to 0.005093223627978 due to risk limits
+2025-07-30 23:29:56,540 - order_executor - INFO - Submitting SELL order for 0.005093223627978 BTC/USDT
+2025-07-30 23:29:56,611 - order_executor - INFO - Simulated FILL for order order_1753910996590
+2025-07-30 23:29:56,611 - main - INFO - Executed SELL order for BTC/USDT: 0.005093223627978 units at 39267.86149765028
+2025-07-30 23:29:56,616 - risk_manager - INFO - Adjusted trade quantity from 0.41488388784629177 to 0.07147500295429156 due to risk limits
+2025-07-30 23:29:56,618 - order_executor - INFO - Submitting SELL order for 0.07147500295429156 ETH/USDT
+2025-07-30 23:29:56,690 - order_executor - INFO - Simulated FILL for order order_1753910996670
+2025-07-30 23:29:56,690 - main - INFO - Executed SELL order for ETH/USDT: 0.07147500295429156 units at 2798.1810665737294
+2025-07-30 23:29:56,693 - risk_manager - INFO - Adjusted trade quantity from 1751.3977464977281 to 403.19838699431955 due to risk limits
+2025-07-30 23:29:56,694 - order_executor - INFO - Submitting SELL order for 403.19838699431955 ADA/USDT
+2025-07-30 23:29:56,765 - order_executor - INFO - Simulated FILL for order order_1753910996745
+2025-07-30 23:29:56,766 - main - INFO - Executed SELL order for ADA/USDT: 403.19838699431955 units at 0.49603373041970455
+2025-07-30 23:29:56,851 - risk_manager - INFO - Adjusted trade quantity from 0.01988659573850981 to 0.005093223627978 due to risk limits
+2025-07-30 23:29:56,852 - order_executor - INFO - Submitting SELL order for 0.005093223627978 BTC/USDT
+2025-07-30 23:29:56,923 - order_executor - INFO - Simulated FILL for order order_1753910996903
+2025-07-30 23:29:56,923 - main - INFO - Executed SELL order for BTC/USDT: 0.005093223627978 units at 39267.86149765028
+2025-07-30 23:29:56,926 - risk_manager - INFO - Adjusted trade quantity from 0.356700181808297 to 0.07147500295429156 due to risk limits
+2025-07-30 23:29:56,927 - order_executor - INFO - Submitting SELL order for 0.07147500295429156 ETH/USDT
+2025-07-30 23:29:56,998 - order_executor - INFO - Simulated FILL for order order_1753910996978
+2025-07-30 23:29:56,999 - main - INFO - Executed SELL order for ETH/USDT: 0.07147500295429156 units at 2798.1810665737294
+2025-07-30 23:29:57,002 - risk_manager - INFO - Adjusted trade quantity from 1755.9885608666611 to 403.19838699431955 due to risk limits
+2025-07-30 23:29:57,003 - order_executor - INFO - Submitting SELL order for 403.19838699431955 ADA/USDT
+2025-07-30 23:29:57,075 - order_executor - INFO - Simulated FILL for order order_1753910997054
+2025-07-30 23:29:57,075 - main - INFO - Executed SELL order for ADA/USDT: 403.19838699431955 units at 0.49603373041970455
+2025-07-30 23:29:57,202 - risk_manager - INFO - Adjusted trade quantity from 0.01988659573850981 to 0.005093223627978 due to risk limits
+2025-07-30 23:29:57,203 - order_executor - INFO - Submitting SELL order for 0.005093223627978 BTC/USDT
+2025-07-30 23:29:57,274 - order_executor - INFO - Simulated FILL for order order_1753910997254
+2025-07-30 23:29:57,275 - main - INFO - Executed SELL order for BTC/USDT: 0.005093223627978 units at 39267.86149765028
+2025-07-30 23:29:57,279 - risk_manager - INFO - Adjusted trade quantity from 0.356700181808297 to 0.07147500295429156 due to risk limits
+2025-07-30 23:29:57,282 - order_executor - INFO - Submitting SELL order for 0.07147500295429156 ETH/USDT
+2025-07-30 23:29:57,357 - order_executor - INFO - Simulated FILL for order order_1753910997336
+2025-07-30 23:29:57,357 - main - INFO - Executed SELL order for ETH/USDT: 0.07147500295429156 units at 2798.1810665737294
+2025-07-30 23:29:57,360 - risk_manager - INFO - Adjusted trade quantity from 1755.9885608666611 to 403.19838699431955 due to risk limits
+2025-07-30 23:29:57,361 - order_executor - INFO - Submitting SELL order for 403.19838699431955 ADA/USDT
+2025-07-30 23:29:57,434 - order_executor - INFO - Simulated FILL for order order_1753910997413
+2025-07-30 23:29:57,440 - main - INFO - Executed SELL order for ADA/USDT: 403.19838699431955 units at 0.49603373041970455
+2025-07-30 23:29:57,443 - main - INFO - Results saved to results_20250730_232957.json
+2025-07-30 23:29:57,444 - main - INFO - Stopping trading system
+2025-07-30 23:29:57,444 - order_executor - INFO - Disconnecting from broker API...
